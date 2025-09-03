@@ -1,0 +1,67 @@
+<!-- EDITOR_BLOCK_TEMPLATE:Ai_generated_customblock_9e491374_a9a2_48e2_ad48_190f309ddd4d-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%; background-color:${editor.footer_bg} ; border-radius:${editor.footer_radius} ; background-image: url('${editor.footer_bgimg}') ; background-position:${editor.footer_bgpos} ; background-repeat:${editor.footer_bgrepeat} ; background-size:${editor.footer_bgsize} ; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+  <tbody>
+    <tr>
+      <td align="left" valign="top" style="padding:${editor.footer_content_padding};">
+        <!-- Логотип и соцсети -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; line-height:normal;font-size:0;">
+          <tr>
+            <td align="left" valign="top" style="width:60%;" width="60%">
+              @{if editor.shouldshowfooterlogo}
+              <img width="${editor.footer_logo_width}" src="${editor.footer_logo_src}" alt="${editor.footer_logo_alt}" style="display:block; width:auto; max-width:${editor.footer_logo_maxwidth};">
+              @{end if}
+            </td>
+            <td align="right" valign="top" style="width:40%;" width="40%">
+              @{if editor.shouldshowfootersoc1}
+              <a href="${editor.footer_soc1_link}" target="_blank" style="text-decoration:${editor.footer_soc1_textdec} ;display:inline-block;vertical-align:top;padding-left:${editor.footer_soc1_padleft};">
+                <img width="${editor.footer_soc1_imgwidth}" src="${editor.footer_soc1_imgsrc}" alt="${editor.footer_soc1_imgalt}" style="display:block;width:auto;max-width:${editor.footer_soc1_imgmaxwidth};">
+              </a>
+              @{end if}
+              @{if editor.shouldshowfootersoc2}
+              <a href="${editor.footer_soc2_link}" target="_blank" style="text-decoration:${editor.footer_soc2_textdec} ;display:inline-block;vertical-align:top;padding-left:${editor.footer_soc2_padleft};">
+                <img width="${editor.footer_soc2_imgwidth}" src="${editor.footer_soc2_imgsrc}" alt="${editor.footer_soc2_imgalt}" style="display:block;width:auto;max-width:${editor.footer_soc2_imgmaxwidth};">
+              </a>
+              @{end if}
+              @{if editor.shouldshowfootersoc3}
+              <a href="${editor.footer_soc3_link}" target="_blank" style="text-decoration:${editor.footer_soc3_textdec} ;display:inline-block;vertical-align:top;padding-left:${editor.footer_soc3_padleft};">
+                <img width="${editor.footer_soc3_imgwidth}" src="${editor.footer_soc3_imgsrc}" alt="${editor.footer_soc3_imgalt}" style="display:block;width:auto;max-width:${editor.footer_soc3_imgmaxwidth};">
+              </a>
+              @{end if}
+            </td>
+          </tr>
+        </table>
+        
+        <!-- Контактный телефон -->
+        @{if editor.shouldshowfooterphone}
+        <div style="padding:${editor.footer_phone_padding};${editor.footer_phone_textstyles}">${editor.footer_phone_text}</div>
+        @{end if}
+
+        <!-- Линия -->
+        @{if editor.shouldshowfooterline}
+        <div style="height:${editor.footer_line_height}; background-color:${editor.footer_line_bg}; width:100%; display:block; margin:${editor.footer_line_margin};"></div>
+        @{end if}
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%; border-collapse:collapse;mso-table-lspace:0pt; mso-table-rspace:0pt;">
+          <tr>
+            <td align="left" valign="top" style="padding:0 0 0 0; width:50%;" width="50%">
+              @{if editor.shouldshowfooterunsubscribe}
+              <a href="${editor.footer_unsubscribe_link}" target="_blank" style="${editor.footer_unsubscribe_textstyles};">${editor.footer_unsubscribe_text}</a>
+              @{end if}
+            </td>
+            <td align="right" valign="top" style="padding:0 0 0 0; width:50%;" width="50%">
+              @{if editor.shouldshowfootercopyright}
+              <div style="${editor.footer_copyright_textstyles};">${editor.footer_copyright_text}</div>
+              @{end if}
+            </td>
+          </tr>
+        </table>
+
+        @{if editor.shouldshowfooterundertext}
+        <div style="margin-top:${editor.footer_undertext_mt};${editor.footer_undertext_textstyles}">
+          ${editor.footer_undertext}
+        </div>
+        @{end if}
+      </td>
+    </tr>
+  </tbody>
+</table>
