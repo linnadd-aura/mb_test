@@ -1,0 +1,82 @@
+<!-- EDITOR_BLOCK_TEMPLATE: product_rows_with_cart -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%; background-color:${editor.block_bg}; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; line-height:normal; font-size:0;">
+    <tbody>
+      <tr>
+        <td align="center" valign="top" style="padding:${editor.block_pad};">
+          <!-- Контейнер -->
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:${editor.container_maxwidth}px; width:100%; background-color:${editor.container_bg}; border-radius:${editor.container_radius}; overflow:hidden; border-collapse:separate; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+            <tbody>
+  
+              @{ for item in editor.collection }
+  
+              <!-- Карточка товара -->
+              <tr>
+                <td style="padding:${editor.row_pad};">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width:100%; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                    <tbody>
+                      <tr>
+                        <!-- Фото -->
+                        <td align="left" valign="middle" width="${editor.item_img_size}" style="width:${editor.item_img_size}px; padding-right:${editor.col_gap}px;">
+                          <img src="${editor.product_PictureUrl}" alt="${editor.product_alttext}" width="${editor.item_img_size}" height="${editor.item_img_size}" style="display:block; width:${editor.item_img_size}px; height:${editor.item_img_size}px; border-radius:${editor.item_img_radius}px; border:0; outline:none;">
+                        </td>
+  
+                        <!-- Название + описание -->
+                        <td align="left" valign="middle" style="padding-right:${editor.col_gap}px;">
+                          <!-- Управляемая высота заголовка -->
+                          <div style="max-height:${editor.title_box_height}px; overflow:hidden;">
+                            <div style="${editor.title_styles}">${editor.product_name}</div>
+                          </div>
+                          <!-- Управляемая высота описания -->
+                          <div style="max-height:${editor.desc_box_height}px; overflow:hidden; margin-top:6px;">
+                            <div style="${editor.desc_styles}">${editor.product_desc}</div>
+                          </div>
+                        </td>
+  
+                        <!-- Цена -->
+                        <td align="left" valign="middle" width="110" style="width:110px; padding-right:${editor.col_gap}px; white-space:nowrap;">
+                          @{ if editor.product_old_price }
+                          <div style="${editor.old_price_styles}">${editor.product_old_price}</div>
+                          @{ end if }
+                          <div style="height:${editor.price_gap}px; line-height:${editor.price_gap}px; font-size:1px;">&nbsp;</div>
+                          <div style="${editor.new_price_styles}">${editor.product_new_price}</div>
+                        </td>
+  
+                        <!-- Кнопка (иконка корзины) -->
+                        <td align="right" valign="middle" width="1%" style="white-space:nowrap;">
+                          <a href="${editor.product_Url}" style="display:inline-block; text-decoration:none;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="${editor.button_size.width}" style="width:${editor.button_size.formattedWidth};" class="${editor.button_size.class}">
+                              <tbody>
+                                <tr>
+                                  <td align="center" valign="middle" height="${editor.button_size.height}" style="height:${editor.button_size.formattedHeight}; background-color:${editor.button_bg}; border:${editor.button_border}; border-radius:${editor.button_radius};">
+                                    <img src="${editor.button_icon}" alt="${editor.button_icon_alt}" width="${editor.button_icon_size}" height="${editor.button_icon_size}" style="display:block; width:${editor.button_icon_size}px; height:${editor.button_icon_size}px; border:0; outline:none;">
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+  
+              <!-- Межстрочный отступ -->
+              <tr>
+                <td style="height:${editor.row_gap}px; line-height:${editor.row_gap}px; font-size:1px;">&nbsp;</td>
+              </tr>
+  
+              @{ end for }
+  
+              <!-- Безопасный нижний отступ контейнера -->
+              <tr>
+                <td style="height:${editor.bottom_safe_pad}px; line-height:${editor.bottom_safe_pad}px; font-size:1px;">&nbsp;</td>
+              </tr>
+  
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
